@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.grid-conatiner {
+  background-color: rgb(76, 76, 76);
+  padding: 20px;
+
+  text-align: center;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.grid-cell {
+  background-color: rgb(251, 255, 8);
+  /* // justify-self: end; */
+  width: 100px;
+  height: 100px;
+}
+.conunternIncrement {
+  counter-reset: paragraph;
+}
+
+.conunternIncrement p {
+  counter-increment: paragraph;
+}
+
+.conunternIncrement p::before {
+  content: counter(paragraph) ". ";
+  font-weight: bold;
+  margin-right: 5px;
+}

@@ -1,0 +1,271 @@
+// start variables
+$blue: #09568d;
+$gray-600: #424242;
+$green: #a0bd00;
+$gray-400: #ced4da;
+$h1-font-size: 3.375rem;
+$h2-font-size: 2.813rem;
+$h3-font-size: 1.75rem;
+$h4-font-size: 1.375rem;
+$h5-font-size: 1.125rem;
+$btn-font-size: 1.125rem;
+$border-radius: 0.5rem;
+$input-border-radius: 0;
+
+@import "~bootstrap/scss/bootstrap";
+
+html {
+	font-size: 16px;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	background: $white;
+}
+
+// start custom common class
+
+.rounded-50{
+	border-radius: 50px;
+}
+
+.bg-light-blue {
+	background-color: #f3faff;
+}
+
+.call-action {
+	font-size: 1.313rem;
+}
+
+// start navbar-nav
+.navbar-nav {
+	.nav-item {
+		margin: 0 9px;
+
+		.nav-link {
+			color: $gray-600;
+			font-size: 20px;
+			line-height: 25px;
+			margin: 0 6px;
+			position: relative;
+
+			&:hover {
+				color: $green;
+			}
+		}
+
+	}
+}
+
+// start time table cards
+.bg-primary-shade-1 {
+	background-color: #0d65a4;
+}
+
+.opening-hours-card {
+	table {
+		margin-bottom: 0;
+
+		tbody {
+			tr {
+				td {
+					background-color: transparent;
+					padding: 7px 12px 7px 1px;
+					color: #fff;
+					border-color: #0b5e9a;
+				}
+			}
+		}
+	}
+}
+
+.h3-cstm {
+	font-size: 1.563rem;
+}
+
+
+@media (max-width: 1199.98px) {
+	.opening-hours-card table tr td {
+		font-size: 13px;
+	}
+
+	.h3-cstm {
+		font-size: 1.125rem;
+	}
+}
+
+.overlay-extend {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.overlay-bg {
+	@extend .overlay-extend;
+	background-color: rgba($white, 0.8);
+}
+
+.z-1 {
+	z-index: 1;
+}
+
+// start services section
+.services-section {
+	background-image: url('../image/bg-services.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-top: 190px;
+	padding-bottom: 60px;
+	margin-top: -125px;
+}
+
+.services-card {
+	p {
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 26px;
+		color: #6a6a6a;
+	}
+}
+
+
+// start Slider 
+.owl-carousel {
+	&.compare-slider {
+
+		.item {
+			figure {
+				img {
+					border-radius: 8px;
+				}
+			}
+		}
+
+		// start nav arrow
+		.owl-nav {
+			margin-top: 0;
+
+			button {
+
+				&.owl-prev,
+				&.owl-next {
+					position: absolute;
+					top: 50%;
+					background: $white;
+					width: 40px;
+					height: 40px;
+					border-radius: 50%;
+					font-size: 22px;
+					margin: 0;
+				}
+
+				&.owl-prev {
+					left: 16px;
+				}
+
+				&.owl-next {
+					right: 16px;
+				}
+
+				&:hover {
+					background-color: #a0bd00;
+				}
+			}
+		}
+	}
+
+	// start testimonials
+	&.testimonials-slider {
+		.owl-dots {
+			display: flex;
+			margin-top: 0;
+			justify-content: flex-start;
+
+			.owl-dot {
+				&.active {
+					span {
+						background-color: $green;
+					}
+				}
+
+				&:hover {
+					span {
+						background-color: $green;
+					}
+				}
+			}
+		}
+	}
+}
+
+// start appointment-section
+.appointment-section {
+	background-image: url('../image/bg-clinic.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+// start footer
+.social-handle {
+	a {
+		background-color: rgba($white, .15);
+		width: 42px;
+		height: 42px;
+		border-radius: 50%;
+		text-align: center;
+		line-height: 40px;
+		margin: 0 10px;
+
+		svg {
+			fill: $white;
+			width: 20px;
+		}
+	}
+}
+
+.footer-widgets {
+	position: relative;
+
+	h5 {
+		color: $white;
+		margin-bottom: 25px;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+
+		li {
+			list-style: none;
+			line-height: 25px;
+			margin-bottom: 9px;
+
+			a {
+				color: $white;
+				text-decoration: none;
+			}
+		}
+	}
+
+	address {
+		color: $white;
+
+		p {
+			color: $white;
+
+			a {
+				color: $white;
+			}
+		}
+	}
+}
+.copywrite-section{
+	background-color:#084978;
+}

@@ -1,0 +1,148 @@
+/* Section styling */
+.testimonial-section {
+    background: linear-gradient(135deg, #09568d, #a0bd00);
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Main heading with animation underline */
+  .section-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .section-title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 4px;
+    background-color: #09568d;
+    border-radius: 10px;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  .section-title:hover::after {
+    width: 100%;
+  }
+  
+  .section-subtitle {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-weight: 300;
+    color: #e2e2e2;
+  }
+  
+  /* Testimonial container */
+  .testimonial-container {
+    position: relative;
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    color: #333;
+    border-radius: 20px;
+    padding: 50px 30px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+  }
+  
+  /* Testimonial image */
+  .testimonial img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    object-fit: cover;
+    border: 4px solid #a0bd00;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .testimonial img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Navigation buttons default (desktop) */
+  .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #09568d;
+    color: white;
+    border: none;
+    font-size: 22px;
+    padding: 15px;
+    border-radius: 100%;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+    z-index: 2;
+  }
+  
+  .nav-btn:hover {
+    background: #a0bd00;
+  }
+  
+  .prev-btn {
+    left: -50px;
+  }
+  
+  .next-btn {
+    right: -50px;
+  }
+  
+  /* Nav wrapper for mobile */
+  .nav-mobile-wrapper {
+    display: none;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2rem;
+    }
+  
+    .section-subtitle {
+      font-size: 1.2rem;
+    }
+  
+    .testimonial-container {
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    /* Hide absolute-positioned nav buttons */
+    .prev-btn,
+    .next-btn {
+      position: relative;
+      left: auto;
+      right: auto;
+      top: auto;
+      transform: none;
+      margin: 10px;
+      padding: 10px;
+      font-size: 20px;
+      width: 45px;
+      height: 45px;
+    }
+  
+    .nav-btn {
+      box-shadow: none;
+    }
+  
+    .nav-mobile-wrapper {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+  }
+  
